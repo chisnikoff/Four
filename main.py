@@ -18,9 +18,9 @@ crop_blue = blue_channel.crop(right_shift_coordinates)
 crop_blue2 = blue_channel_double.crop(cropped_coordinates)
 img_blue = Image.blend(crop_blue, crop_blue2, 0.3)
 
-croped_coordinates = (shift_value/2, 0, green_channel.width-shift_value/2, green_channel.height)
-img_green = green_channel.crop(croped_coordinates)
+cropped_coordinates = (shift_value/2, 0, green_channel.width-shift_value/2, green_channel.height)
+img_green = green_channel.crop(cropped_coordinates)
 
 new_image = Image.merge("RGB", (img_red, img_green, img_blue))
 new_image.thumbnail((80, 80))
-new_image.save('all.jpg')
+new_image.save('avatar.jpg')
